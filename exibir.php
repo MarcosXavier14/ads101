@@ -9,11 +9,19 @@
         <td>Tabela criada pelo FOR</td>
     </tr>
     <?php
-    $quantidade = $_POST['quantidade'];
+    $quantidadeLinha = $_POST['quantidadeLinha'];
+    $quantidadeColuna = $_POST['quantidadeColuna'];
     #echo $quantidade;
-    for ($i = 1; $i <= $quantidade; $i++) {
-        echo "<tr><td>linha $i</td></tr>";
-    }
+    for ($i = 1; $i <= $quantidadeLinha; $i++) 
+        {
+            echo "<Tr>";
+            for($j = 1;$j <= $quantidadeColuna; $j++)
+            {
+            echo "<td>$j</td>";
+            }
+            "</tr>";
+        }
+        
     ?>
 </table>
 
